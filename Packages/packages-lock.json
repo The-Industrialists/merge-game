@@ -1,12 +1,5 @@
 {
   "dependencies": {
-    "com.spoiledcat.git": {
-      "version": "1.0.27",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://registry.spoiledcat.com"
-    },
     "com.unity.2d.animation": {
       "version": "9.0.4",
       "depth": 1,

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4537037556296670719}
   - component: {fileID: 3737994612929463994}
   - component: {fileID: -1798048495218524777}
+  - component: {fileID: 1694475482182598122}
   m_Layer: 0
   m_Name: shrimp
   m_TagString: Untagged
@@ -148,3 +149,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1694475482182598122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8637850521919422926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c801c7a254a4c54bc23ae025862d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempuraPrefab: {fileID: 6779060163142234380, guid: 5f1ef2ef7564846738a24d2c56aaed68, type: 3}
