@@ -14,7 +14,7 @@ public class Maki : MonoBehaviour
 
     private void OnDisable()
     {
-        shrimpList.Remove(this);
+        makiList.Remove(this);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -33,7 +33,7 @@ public class Maki : MonoBehaviour
             Vector2 midPoint = (maki1.transform.position + maki2.transform.position) / 2;
 
 
-            Instantiate(gunkanPrefabPrefab, midPoint, Quaternion.identity);
+            Instantiate(gunkanPrefab, midPoint, Quaternion.identity);
 
 
             maki1.hasCombined = true;

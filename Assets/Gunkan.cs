@@ -33,7 +33,7 @@ public class Gunkan : MonoBehaviour
             Vector2 midPoint = (gunkan1.transform.position + gunkan2.transform.position) / 2;
 
 
-            Instantiate(tempuraPrefab, midPoint, Quaternion.identity);
+            Instantiate(inariPrefab, midPoint, Quaternion.identity);
 
 
             gunkan1.hasCombined = true;
