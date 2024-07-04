@@ -7,9 +7,6 @@ public class PlayerController : MonoBehaviour
 
 
      public GameObject shrimpPrefab; // Reference to the shrimp prefab
-    public GameObject tempuraPrefab; // Reference to the tempura prefab
-    public GameObject sashimiPrefab; // Reference to the sashimi prefab
-    public GameObject caRollPrefab; // Reference to the CA_Roll prefab
     public float moveSpeed = 5f; // Speed at which the rectangle moves
                                          // Assign the Shrimp prefab in the inspector
     public Transform shrimpSpawnPoint;
@@ -19,13 +16,23 @@ public class PlayerController : MonoBehaviour
     public Vector3 playerPosition; 
     private List<GameObject> activeGameObjects;
 
+ 
+
     void Update()
     {
-        // Handle movement
-        float move = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-        transform.Translate(move, 0, 0);
+        // Get horizontal input
+        float moveHorizontal = Input.GetAxis("Horizontal");
 
-        if (Input.GetKeyDown(KeyCode.Escape) && Time.time >= nextSpawnTime)
+        // Calculate movement vector
+        Vector3 movement = new Vector3(moveHorizontal, 0f, 0f) * moveSpeed * Time.deltaTime;
+
+        // Apply movement
+        transform.Translate(movement);
+
+
+ 
+
+            if (Input.GetKeyDown(KeyCode.Escape) && Time.time >= nextSpawnTime)
         {
             SaveProgress();
             SceneManager.LoadScene("TitleScreen");
@@ -39,40 +46,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void SaveProgress()
-    {
-        // Save player progress to GameManager
-        GameManager.Instance.SavePlayerProgress(playerScore, transform.position);
-    }
 
-        void Start()
-    {
-        // Load player progress from GameManager
-        if (GameManager.Instance != null)
-        {
-            int score;
-            Vector3 position;
-            GameManager.Instance.LoadPlayerProgress(out score, out position);
-            playerScore = score;
-            transform.position = position;
 
-            // Load saved game objects
-            List<GameObjectData> savedGameObjects = GameManager.Instance.LoadGameObjectStates();
-            foreach (var data in savedGameObjects)
-            {
-                GameObject prefab = GetPrefabByName(data.prefabName);
-                if (prefab != null)
-                {
-                    GameObject newObject = Instantiate(prefab, data.position, data.rotation);
-                    activeGameObjects.Add(newObject);
-                }
-            }
-        }
-        else
-        {
-            Debug.LogError("GameManager instance not found.");
-        }
-    }
    
    
 
@@ -83,20 +58,5 @@ public class PlayerController : MonoBehaviour
         Instantiate(shrimpPrefab, spawnPosition, Quaternion.identity);
     }
 
-    GameObject GetPrefabByName(string prefabName)
-    {
-        switch (prefabName)
-        {
-            case "Shrimp":
-                return shrimpPrefab;
-            case "Tempura":
-                return tempuraPrefab;
-            case "Sashimi":
-                return sashimiPrefab;
-            case "CA_Roll":
-                return caRollPrefab;
-            default:
-                return null;
-        }
-    }
+
 }
