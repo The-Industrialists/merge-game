@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
    {
 
     Vector3 spawnPosition = shrimpSpawnPoint != null ? shrimpSpawnPoint.position : transform.position;
-    Instantiate(ShahsimiPrefab, spawnPosition, Quaternion.identity);
+    Instantiate(TempuraPrefab, spawnPosition, Quaternion.identity);
    }
    
 
@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
    {
 
     Vector3 spawnPosition = shrimpSpawnPoint != null ? shrimpSpawnPoint.position : transform.position;
-    Instantiate(TempuraPrefab, spawnPosition, Quaternion.identity);
+    Instantiate(ShahsimiPrefab, spawnPosition, Quaternion.identity);
    }
 
         void OnCollisionEnter(Collision collision)

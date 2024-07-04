@@ -161,4 +161,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcdf8f1f6090c4244a98f9875447e6f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inarizushiPrefab: {fileID: 0}
+  inarizushiPrefab: {fileID: 7383534755063173582, guid: 5bb73f12425c34aaa94e1cf2b3ddc915, type: 3}
