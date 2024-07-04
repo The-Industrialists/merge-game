@@ -1,47 +1,47 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class Tune_Roll : MonoBehaviour
+public class Tuna_Roll : MonoBehaviour
 {
     public GameObject inarizushiPrefab; 
-    private static List<Shrimp> shrimpList = new List<Shrimp>();
+    private static List<Tuna_Roll> tune_rollList = new List<Tuna_Roll>();
     private bool hasCombined = false; 
 
     private void OnEnable()
     {
-        shrimpList.Add(this);
+        tune_rollList.Add(this);
     }
 
     private void OnDisable()
     {
-        shrimpList.Remove(this);
+        tune_rollList.Remove(this);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Shrimp otherShrimp = collision.gameObject.GetComponent<Shrimp>();
-        if (otherShrimp != null && otherShrimp != this && !this.hasCombined && !otherShrimp.hasCombined)
+        Tuna_Roll otherTuna_Roll = collision.gameObject.GetComponent<Tuna_Roll>();
+        if (otherTuna_Roll != null && otherTuna_Roll != this && !this.hasCombined && !otherTuna_Roll.hasCombined)
         {
-            CombineShrimp(this, otherShrimp);
+            CombineTuna_Roll(this, otherTuna_Roll);
         }
     }
 
-    private void CombineShrimp(Shrimp shrimp1, Shrimp shrimp2)
+    private void CombineTuna_Roll(Tuna_Roll tuna_roll1, Tuna_Roll tuna_roll2)
     {
-        if (shrimp1 != null && shrimp2 != null)
+        if (tuna_roll1 != null && tuna_roll2 != null)
         {
-            Vector2 midPoint = (shrimp1.transform.position + shrimp2.transform.position) / 2;
+            Vector2 midPoint = (tuna_roll1.transform.position + tuna_roll2.transform.position) / 2;
 
 
-            Instantiate(tempuraPrefab, midPoint, Quaternion.identity);
+            Instantiate(inarizushiPrefab, midPoint, Quaternion.identity);
 
 
-            shrimp1.hasCombined = true;
-            shrimp2.hasCombined = true;
+            tuna_roll1.hasCombined = true;
+            tuna_roll2.hasCombined = true;
 
 
-            Destroy(shrimp1.gameObject);
-            Destroy(shrimp2.gameObject);
+            Destroy(tuna_roll1.gameObject);
+            Destroy(tuna_roll2.gameObject);
         }
     }
 }

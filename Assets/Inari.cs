@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class Inari : MonoBehaviour
 {
-    public GameObject tune_rollPrefab; 
+    public GameObject tuna_rollPrefab; 
     private static List<Inari> inariList = new List<Inari>();
     private bool hasCombined = false; 
 
@@ -22,18 +22,18 @@ public class Inari : MonoBehaviour
         Inari otherInari = collision.gameObject.GetComponent<Inari>();
         if (otherInari != null && otherInari != this && !this.hasCombined && !otherInari.hasCombined)
         {
-            CombineShrimp(this, otherInari);
+            CombineInari(this, otherInari);
         }
     }
 
-    private void CombineShrimp(Inari inari1, Inari inari2)
+    private void CombineInari(Inari inari1, Inari inari2)
     {
         if (inari1 != null && inari2 != null)
         {
             Vector2 midPoint = (inari1.transform.position + inari2.transform.position) / 2;
 
 
-            Instantiate(tempuraPrefab, midPoint, Quaternion.identity);
+            Instantiate(tuna_rollPrefab, midPoint, Quaternion.identity);
 
 
             inari1.hasCombined = true;
