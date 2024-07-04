@@ -63,7 +63,8 @@ public class PlayerController : MonoBehaviour
                 GameObject prefab = GetPrefabByName(data.prefabName);
                 if (prefab != null)
                 {
-                    Instantiate(prefab, data.position, data.rotation);
+                    GameObject newObject = Instantiate(prefab, data.position, data.rotation);
+                    activeGameObjects.Add(newObject);
                 }
             }
         }
@@ -71,9 +72,8 @@ public class PlayerController : MonoBehaviour
         {
             Debug.LogError("GameManager instance not found.");
         }
-
-        activeGameObjects = new List<GameObject>();
     }
+   
    
 
     void SpawnShrimp()
@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
         Instantiate(shrimpPrefab, spawnPosition, Quaternion.identity);
     }
 
-        GameObject GetPrefabByName(string prefabName)
+    GameObject GetPrefabByName(string prefabName)
     {
         switch (prefabName)
         {

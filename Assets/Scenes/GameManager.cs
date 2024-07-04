@@ -37,19 +37,9 @@ public class GameManager : MonoBehaviour
         position = playerPosition;
     }
 
-    public void SaveGameObjectStates(List<GameObject> gameObjects)
+    public void SaveGameObjectStates(List<GameObjectData> gameObjectData)
     {
-        gameObjectStates.Clear();
-        foreach (var obj in gameObjects)
-        {
-            GameObjectData data = new GameObjectData
-            {
-                position = obj.transform.position,
-                rotation = obj.transform.rotation,
-                prefabName = obj.name.Replace("(Clone)", "").Trim() // Assuming the object names match prefab names
-            };
-            gameObjectStates.Add(data);
-        }
+        gameObjectStates = gameObjectData;
     }
 
     public List<GameObjectData> LoadGameObjectStates()

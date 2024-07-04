@@ -488,8 +488,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28c23ef07b8d24f4095c5db0cd558fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
   shrimpPrefab: {fileID: 8637850521919422926, guid: 5c43a9b5c5d1c42889089bbe1d7d6c84, type: 3}
+  tempuraPrefab: {fileID: 6779060163142234380, guid: 5f1ef2ef7564846738a24d2c56aaed68, type: 3}
+  sashimiPrefab: {fileID: 9013608476441804115, guid: 189c7acb738794f4e86b39ff417fec4d, type: 3}
+  caRollPrefab: {fileID: 500581292135958587, guid: 71caa72bd5a72451b9b0f1b316bd37c6, type: 3}
+  moveSpeed: 5
   shrimpSpawnPoint: {fileID: 4966301713663980460}
   spawnCooldown: 0
   playerScore: 0
