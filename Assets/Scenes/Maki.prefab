@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5684915148545864407}
   - component: {fileID: 4141195482181006782}
   - component: {fileID: 8454746718183168431}
+  - component: {fileID: 5035671049664708467}
   m_Layer: 0
   m_Name: Maki
   m_TagString: Untagged
@@ -148,3 +149,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5035671049664708467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7506052857287460408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a3e47b17c5a14260852f3e6d090fb41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunkanPrefab: {fileID: 8155056295142987283, guid: f5f7e3612647d45ca80bf29f2daffaac, type: 3}
