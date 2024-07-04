@@ -355,7 +355,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3341207937980839940, guid: 9958853828b9e4616b2ed7ee77aa8cd1, type: 3}
       propertyPath: m_Name
-      value: wall (1)
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 6924768432813054120, guid: 9958853828b9e4616b2ed7ee77aa8cd1, type: 3}
       propertyPath: m_LocalScale.x
@@ -489,6 +489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shrimpPrefab: {fileID: 8637850521919422926, guid: 5c43a9b5c5d1c42889089bbe1d7d6c84, type: 3}
+  TempuraPrefab: {fileID: 6779060163142234380, guid: 5f1ef2ef7564846738a24d2c56aaed68, type: 3}
   moveSpeed: 5
   shrimpSpawnPoint: {fileID: 4966301713663980460}
   spawnCooldown: 0
@@ -547,7 +548,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856961673}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -694,7 +695,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3341207937980839940, guid: 9958853828b9e4616b2ed7ee77aa8cd1, type: 3}
       propertyPath: m_Name
-      value: wall
+      value: box
       objectReference: {fileID: 0}
     - target: {fileID: 6924768432813054120, guid: 9958853828b9e4616b2ed7ee77aa8cd1, type: 3}
       propertyPath: m_LocalPosition.x

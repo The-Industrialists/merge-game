@@ -33,7 +33,7 @@ public class Nigri : MonoBehaviour
             Vector2 midPoint = (nigri1.transform.position + nigri2.transform.position) / 2;
 
             // Instantiate the maki at the midpoint
-            Instantiate(makiPrefabPrefab, midPoint, Quaternion.identity);
+            Instantiate(makiPrefab, midPoint, Quaternion.identity);
 
             // Set the flags to true to prevent further combination
             nigri1.hasCombined = true;

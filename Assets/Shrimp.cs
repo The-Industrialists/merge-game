@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 public class Shrimp : MonoBehaviour
 {
-    public GameObject tempuraPrefab; // Assign the Tempura prefab in the inspector
+    public GameObject tempuraPrefab; 
     private static List<Shrimp> shrimpList = new List<Shrimp>();
-    private bool hasCombined = false; // Flag to check if the shrimp has been combined
+    private bool hasCombined = false; 
 
     private void OnEnable()
     {
@@ -32,14 +32,14 @@ public class Shrimp : MonoBehaviour
         {
             Vector2 midPoint = (shrimp1.transform.position + shrimp2.transform.position) / 2;
 
-            // Instantiate the Tempura at the midpoint
+
             Instantiate(tempuraPrefab, midPoint, Quaternion.identity);
 
-            // Set the flags to true to prevent further combination
+
             shrimp1.hasCombined = true;
             shrimp2.hasCombined = true;
 
-            // Destroy the two shrimp
+
             Destroy(shrimp1.gameObject);
             Destroy(shrimp2.gameObject);
         }
