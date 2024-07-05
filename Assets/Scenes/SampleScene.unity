@@ -619,6 +619,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8155056295142987283, guid: f5f7e3612647d45ca80bf29f2daffaac, type: 3}
     - target: {fileID: 6328474756401391900, guid: 7241dabed5f7844bd8608a039a96c677, type: 3}
+      propertyPath: TemakiPrefab
+      value: 
+      objectReference: {fileID: 5661400735326862837, guid: bfca11043366d4b97bfa187cbdb7a758, type: 3}
+    - target: {fileID: 6328474756401391900, guid: 7241dabed5f7844bd8608a039a96c677, type: 3}
       propertyPath: spawnCooldown
       value: 0
       objectReference: {fileID: 0}

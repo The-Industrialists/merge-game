@@ -28,9 +28,19 @@ public class PlayerController : MonoBehaviour
     private float nextSpawnTime = 0f;
     public int playerScore;
     public Vector3 playerPosition; 
+     private List<GameObject> prefabs;
 
 
  
+
+
+     void Start()
+    {
+        // Initialize the list of prefabs
+        prefabs = new List<GameObject> { shrimpPrefab, TempuraPrefab, ShahsimiPrefab, CA_RollPrefab, NigriPrefab, MakiPrefab};
+    }
+
+
 
     void Update()
     {
@@ -55,51 +65,11 @@ public class PlayerController : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space) && Time.time >= nextSpawnTime)
         {
-            SpawnShrimp();
+            SpawnRandomItem();
             nextSpawnTime = Time.time + spawnCooldown;
         }
 
-        if (Input.GetKeyDown(KeyCode.T) && Time.time >= nextSpawnTime)
-        {
-            SpawnTempura();
-            nextSpawnTime = Time.time + spawnCooldown;
-        }
-
-        if (Input.GetKeyDown(KeyCode.S) && Time.time >= nextSpawnTime)
-        {
-            SpawnShashimi();
-            nextSpawnTime = Time.time + spawnCooldown;
-        }
-
-           if (Input.GetKeyDown(KeyCode.C) && Time.time >= nextSpawnTime)
-        {
-            SpawnCA_Roll();
-            nextSpawnTime = Time.time + spawnCooldown;
-        }
-
-         if (Input.GetKeyDown(KeyCode.N) && Time.time >= nextSpawnTime)
-        {
-            SpawnNigri();
-            nextSpawnTime = Time.time + spawnCooldown;
-        }
-
-        if (Input.GetKeyDown(KeyCode.M) && Time.time >= nextSpawnTime)
-        {
-            SpawnMaki();
-            nextSpawnTime = Time.time + spawnCooldown;
-        }
-
-         if (Input.GetKeyDown(KeyCode.G) && Time.time >= nextSpawnTime)
-        {
-            SpawnGunkan();
-            nextSpawnTime = Time.time + spawnCooldown;
-        }
-
-        if (Input.GetKeyDown(KeyCode.U) && Time.time >= nextSpawnTime)
-        {
-            SpawnTemaki();
-            nextSpawnTime = Time.time + spawnCooldown;
-        }
+   
     }
 
 
@@ -162,6 +132,19 @@ public class PlayerController : MonoBehaviour
     Vector3 spawnPosition = shrimpSpawnPoint != null ? shrimpSpawnPoint.position : transform.position;
     Instantiate(TemakiPrefab, spawnPosition, Quaternion.identity);
    }
+
+
+
+    void SpawnRandomItem()
+    {
+        // Choose a random prefab from the list
+        int randomIndex = Random.Range(0, prefabs.Count);
+        GameObject prefabToSpawn = prefabs[randomIndex];
+
+        // If a spawn point is assigned, use its position; otherwise, use the player's position
+        Vector3 spawnPosition = shrimpSpawnPoint != null ? shrimpSpawnPoint.position : transform.position;
+        Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
+    }
 
 
 
