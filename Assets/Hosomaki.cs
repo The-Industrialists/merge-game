@@ -33,7 +33,7 @@ public class Hosomaki : MonoBehaviour
             Vector2 midPoint = (hosomaki1.transform.position + hosomaki2.transform.position) / 2;
 
 
-            Instantiate(tempuraPrefab, midPoint, Quaternion.identity);
+            Instantiate(hamachiPrefab, midPoint, Quaternion.identity);
 
 
             hosomaki1.hasCombined = true;

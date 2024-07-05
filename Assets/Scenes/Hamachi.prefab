@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5490702147801795764
+--- !u!1 &695673356622257882
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7556619580232965483}
-  - component: {fileID: 7872821863479662133}
-  - component: {fileID: 6328474756401391900}
-  - component: {fileID: -2171340670349783541}
-  - component: {fileID: 6177621846824290280}
+  - component: {fileID: 1345633103006229393}
+  - component: {fileID: 5411828269362704404}
+  - component: {fileID: 4264251819371654000}
+  - component: {fileID: 5807449066496076159}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Hamachi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7556619580232965483
+--- !u!4 &1345633103006229393
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5490702147801795764}
+  m_GameObject: {fileID: 695673356622257882}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2974, y: 5.46, z: 0}
-  m_LocalScale: {x: 2.0149, y: 0.9154, z: 1}
+  m_LocalPosition: {x: -53.13252, y: -1.75319, z: 0}
+  m_LocalScale: {x: 2.1, y: 2.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7872821863479662133
+--- !u!212 &5411828269362704404
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5490702147801795764}
+  m_GameObject: {fileID: 695673356622257882}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -76,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Color: {r: 0.8773585, g: 0.4288543, b: 0.028969401, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -87,35 +86,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6328474756401391900
-MonoBehaviour:
+--- !u!58 &4264251819371654000
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5490702147801795764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28c23ef07b8d24f4095c5db0cd558fb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shrimpPrefab: {fileID: 8637850521919422926, guid: 5c43a9b5c5d1c42889089bbe1d7d6c84, type: 3}
-  TempuraPrefab: {fileID: 6779060163142234380, guid: 5f1ef2ef7564846738a24d2c56aaed68, type: 3}
-  ShahsimiPrefab: {fileID: 9013608476441804115, guid: 189c7acb738794f4e86b39ff417fec4d, type: 3}
-  CA_RollPrefab: {fileID: 500581292135958587, guid: 71caa72bd5a72451b9b0f1b316bd37c6, type: 3}
-  NigriPrefab: {fileID: 1657398465226463370, guid: 99152dfb5037947eda68f661f6dc5d7a, type: 3}
-  moveSpeed: 5
-  shrimpSpawnPoint: {fileID: 0}
-  spawnCooldown: 1
-  playerScore: 0
-  playerPosition: {x: 0, y: 0, z: 0}
---- !u!61 &-2171340670349783541
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5490702147801795764}
+  m_GameObject: {fileID: 695673356622257882}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -142,26 +119,16 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!50 &6177621846824290280
+  m_Radius: 0.49999997
+--- !u!50 &5807449066496076159
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5490702147801795764}
+  m_GameObject: {fileID: 695673356622257882}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0

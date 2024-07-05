@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3168937554596357050}
   - component: {fileID: 6123713923879743238}
   - component: {fileID: 858858981114836165}
+  - component: {fileID: -823393678180609186}
   m_Layer: 0
   m_Name: Inarizushi
   m_TagString: Untagged
@@ -148,3 +149,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-823393678180609186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7383534755063173582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d3b1dad2c37e42b1b64a90c1c4156ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hosomakiPrefab: {fileID: 8068886560819209676, guid: a8ec0522c0e8b4ac5972a61e8c1de9ed, type: 3}
