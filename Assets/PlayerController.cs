@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     public GameObject NigriPrefab;
 
     public GameObject MakiPrefab;
+
+    public GameObject GunkanPrefab;
+
     public float moveSpeed = 5f; // Speed at which the rectangle moves
                                          // Assign the Shrimp prefab in the inspector
     public Transform shrimpSpawnPoint;
@@ -83,6 +86,12 @@ public class PlayerController : MonoBehaviour
             SpawnMaki();
             nextSpawnTime = Time.time + spawnCooldown;
         }
+
+         if (Input.GetKeyDown(KeyCode.G) && Time.time >= nextSpawnTime)
+        {
+            SpawnGunkan();
+            nextSpawnTime = Time.time + spawnCooldown;
+        }
     }
 
 
@@ -131,6 +140,13 @@ public class PlayerController : MonoBehaviour
     Instantiate(MakiPrefab, spawnPosition, Quaternion.identity);
    }
 
+
+    void SpawnGunkan()
+   {
+
+    Vector3 spawnPosition = shrimpSpawnPoint != null ? shrimpSpawnPoint.position : transform.position;
+    Instantiate(GunkanPrefab, spawnPosition, Quaternion.identity);
+   }
 
 
 
