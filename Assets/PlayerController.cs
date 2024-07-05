@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public GameObject CA_RollPrefab;
 
     public GameObject NigriPrefab;
+
+    public GameObject MakiPrefab;
     public float moveSpeed = 5f; // Speed at which the rectangle moves
                                          // Assign the Shrimp prefab in the inspector
     public Transform shrimpSpawnPoint;
@@ -75,6 +77,12 @@ public class PlayerController : MonoBehaviour
             SpawnNigri();
             nextSpawnTime = Time.time + spawnCooldown;
         }
+
+        if (Input.GetKeyDown(KeyCode.M) && Time.time >= nextSpawnTime)
+        {
+            SpawnMaki();
+            nextSpawnTime = Time.time + spawnCooldown;
+        }
     }
 
 
@@ -114,21 +122,16 @@ public class PlayerController : MonoBehaviour
     Vector3 spawnPosition = shrimpSpawnPoint != null ? shrimpSpawnPoint.position : transform.position;
     Instantiate(NigriPrefab, spawnPosition, Quaternion.identity);
    }
+    
 
-        void OnCollisionEnter(Collision collision)
-    {
-        // Check if the collision is with a wall
-        if (collision.gameObject.CompareTag("Wall"))
-        {
-            // Prevent movement in the direction of the wall
-            Vector3 normal = collision.contacts[0].normal;
-            Vector3 movementDirection = transform.position - collision.transform.position;
+    void SpawnMaki()
+   {
 
-            // Project the movement direction onto the plane of the wall's normal
-            Vector3 reflectDirection = Vector3.Reflect(movementDirection, normal).normalized;
-            transform.Translate(reflectDirection * 0.1f); // Adjust the offset as needed to prevent overlapping
-        }
-    }
+    Vector3 spawnPosition = shrimpSpawnPoint != null ? shrimpSpawnPoint.position : transform.position;
+    Instantiate(MakiPrefab, spawnPosition, Quaternion.identity);
+   }
+
+
 
 
 }
