@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
 
     public GameObject GunkanPrefab;
 
+    public GameObject TemakiPrefab;
+
     public float moveSpeed = 5f; // Speed at which the rectangle moves
                                          // Assign the Shrimp prefab in the inspector
     public Transform shrimpSpawnPoint;
@@ -92,6 +94,12 @@ public class PlayerController : MonoBehaviour
             SpawnGunkan();
             nextSpawnTime = Time.time + spawnCooldown;
         }
+
+        if (Input.GetKeyDown(KeyCode.U) && Time.time >= nextSpawnTime)
+        {
+            SpawnTemaki();
+            nextSpawnTime = Time.time + spawnCooldown;
+        }
     }
 
 
@@ -146,6 +154,13 @@ public class PlayerController : MonoBehaviour
 
     Vector3 spawnPosition = shrimpSpawnPoint != null ? shrimpSpawnPoint.position : transform.position;
     Instantiate(GunkanPrefab, spawnPosition, Quaternion.identity);
+   }
+
+    void SpawnTemaki()
+   {
+
+    Vector3 spawnPosition = shrimpSpawnPoint != null ? shrimpSpawnPoint.position : transform.position;
+    Instantiate(TemakiPrefab, spawnPosition, Quaternion.identity);
    }
 
 
