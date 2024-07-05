@@ -10,6 +10,10 @@ public class PlayerController : MonoBehaviour
     public GameObject TempuraPrefab;
 
     public GameObject ShahsimiPrefab;
+
+    public GameObject CA_RollPrefab;
+
+    public GameObject NigriPrefab;
     public float moveSpeed = 5f; // Speed at which the rectangle moves
                                          // Assign the Shrimp prefab in the inspector
     public Transform shrimpSpawnPoint;
@@ -17,7 +21,7 @@ public class PlayerController : MonoBehaviour
     private float nextSpawnTime = 0f;
     public int playerScore;
     public Vector3 playerPosition; 
-    private List<GameObject> activeGameObjects;
+
 
  
 
@@ -59,6 +63,18 @@ public class PlayerController : MonoBehaviour
             SpawnShashimi();
             nextSpawnTime = Time.time + spawnCooldown;
         }
+
+           if (Input.GetKeyDown(KeyCode.C) && Time.time >= nextSpawnTime)
+        {
+            SpawnCA_Roll();
+            nextSpawnTime = Time.time + spawnCooldown;
+        }
+
+         if (Input.GetKeyDown(KeyCode.N) && Time.time >= nextSpawnTime)
+        {
+            SpawnNigri();
+            nextSpawnTime = Time.time + spawnCooldown;
+        }
     }
 
 
@@ -83,6 +99,20 @@ public class PlayerController : MonoBehaviour
 
     Vector3 spawnPosition = shrimpSpawnPoint != null ? shrimpSpawnPoint.position : transform.position;
     Instantiate(ShahsimiPrefab, spawnPosition, Quaternion.identity);
+   }
+
+    void SpawnCA_Roll()
+   {
+
+    Vector3 spawnPosition = shrimpSpawnPoint != null ? shrimpSpawnPoint.position : transform.position;
+    Instantiate(CA_RollPrefab, spawnPosition, Quaternion.identity);
+   }
+
+      void SpawnNigri()
+   {
+
+    Vector3 spawnPosition = shrimpSpawnPoint != null ? shrimpSpawnPoint.position : transform.position;
+    Instantiate(NigriPrefab, spawnPosition, Quaternion.identity);
    }
 
         void OnCollisionEnter(Collision collision)
