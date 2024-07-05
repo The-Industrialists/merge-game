@@ -615,6 +615,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7506052857287460408, guid: a640b544d43f64a9ea9cb11cfb1e9711, type: 3}
     - target: {fileID: 6328474756401391900, guid: 7241dabed5f7844bd8608a039a96c677, type: 3}
+      propertyPath: GunkanPrefab
+      value: 
+      objectReference: {fileID: 8155056295142987283, guid: f5f7e3612647d45ca80bf29f2daffaac, type: 3}
+    - target: {fileID: 6328474756401391900, guid: 7241dabed5f7844bd8608a039a96c677, type: 3}
       propertyPath: spawnCooldown
       value: 0
       objectReference: {fileID: 0}

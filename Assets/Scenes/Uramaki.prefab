@@ -161,4 +161,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90c26f059d35947bab4a461394bf9493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temakiPrefab: {fileID: 0}
+  temakiPrefab: {fileID: 5661400735326862837, guid: bfca11043366d4b97bfa187cbdb7a758, type: 3}
